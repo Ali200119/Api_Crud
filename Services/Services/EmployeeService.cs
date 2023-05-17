@@ -31,5 +31,7 @@ namespace Services.Services
         public async Task DeleteAsync(int? id) => await _employeeRepo.DeleteAsync(await _employeeRepo.GetByIdAsync(id));
 
         public async Task UpdateAsync(EmployeeEditDto employee) => await _employeeRepo.UpdateAsync(_mapper.Map<Employee>(employee));
+
+        public async Task<EmployeeDto> SearchByName(string seacrhText) => _mapper.Map<EmployeeDto>(await _employeeRepo.SearchByName(seacrhText));
     }
 }

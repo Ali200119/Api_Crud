@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Repository.Migrations
 {
-    public partial class CreatedCountryAndEmployeeTables : Migration
+    public partial class AddTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,9 +46,9 @@ namespace Repository.Migrations
                 columns: new[] { "Id", "CreatedAt", "Name", "SoftDelete" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Azerbaycan", false },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Turkiye", false },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Ingiltere", false }
+                    { 1, new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6700), "Azerbaycan", false },
+                    { 2, new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6700), "Turkiye", false },
+                    { 3, new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6700), "Ingiltere", false }
                 });
 
             migrationBuilder.InsertData(
@@ -56,9 +56,9 @@ namespace Repository.Migrations
                 columns: new[] { "Id", "Address", "Age", "CreatedAt", "FullName", "SoftDelete" },
                 values: new object[,]
                 {
-                    { 1, "Sumqayit", 27, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Roya Meherremova", false },
-                    { 2, "Xetai", 28, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Anar Aliyev", false },
-                    { 3, "Nesimi", 18, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Mubariz Agayev", false }
+                    { 1, "Sumqayit", 27, new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6590), "Roya Meherremova", false },
+                    { 2, "Xetai", 28, new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6630), "Anar Aliyev", false },
+                    { 3, "Nesimi", 18, new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6630), "Mubariz Agayev", false }
                 });
         }
 

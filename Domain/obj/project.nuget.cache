@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CVcDmUyzH3vxPcA1XcD/vWKCfUesZk3qgKf39Xf+oeaHXHB7bhZHzyZhotkWzr0cuOlN0ABr+kYfiQC+6Y3Qng==",
+  "dgSpecHash": "mmZDJg3Ax2z8QsG+70RkmCkqazssuGuZw2hh5OAQZ7ylEJ3tVJWAuXQWocGkLO/aqdNYSFwZAN2LdqQR0Ov1ng==",
   "success": true,
-  "projectFilePath": "/Users/ali200119/Desktop/P135-Api-Onion/Domain/Domain.csproj",
+  "projectFilePath": "/Users/ali200119/Desktop/Api_Crud/Domain/Domain.csproj",
   "expectedPackageFiles": [
     "/Users/ali200119/.nuget/packages/microsoft.entityframeworkcore/6.0.16/microsoft.entityframeworkcore.6.0.16.nupkg.sha512",
     "/Users/ali200119/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.16/microsoft.entityframeworkcore.abstractions.6.0.16.nupkg.sha512",

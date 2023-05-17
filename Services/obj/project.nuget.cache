@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4lZHxs87AsAZYfS+OBh2Hmho60jEk4zz+fwLlaUfsGVcTC/w2bYOM7whtkjoNUW2as9+X2SQ1RtIAc7HcxyKGQ==",
+  "dgSpecHash": "dv9hLucEjutmr/rfASz4UQf0+6t18alI9HX5JGn7d6gpdi8GyNASIfPLQTLmMQNvXoYU+fJZzvVQPr6bju3HZQ==",
   "success": true,
-  "projectFilePath": "/Users/ali200119/Desktop/P135-Api-Onion/Services/Services.csproj",
+  "projectFilePath": "/Users/ali200119/Desktop/Api_Crud/Services/Services.csproj",
   "expectedPackageFiles": [
     "/Users/ali200119/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/ali200119/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

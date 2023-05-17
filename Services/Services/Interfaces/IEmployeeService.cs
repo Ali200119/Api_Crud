@@ -14,5 +14,6 @@ namespace Services.Services.Interfaces
         Task CreateAsync(EmployeeCreateDto employee);
         Task DeleteAsync(int? id);
         Task UpdateAsync(EmployeeEditDto employee);
+        Task<EmployeeDto> SearchByName(string searchString);
     }
 }

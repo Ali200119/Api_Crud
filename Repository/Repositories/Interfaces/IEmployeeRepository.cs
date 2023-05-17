@@ -9,6 +9,6 @@ namespace Repository.Repositories.Interfaces
 {
     public interface IEmployeeRepository : IRepository<Employee>
     {
-
+        Task<Employee> SearchByName(string searchText);
     }
 }

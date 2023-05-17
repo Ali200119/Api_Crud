@@ -12,8 +12,8 @@ using Repository.Data;
 namespace Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230517082359_ChangeDateContraints")]
-    partial class ChangeDateContraints
+    [Migration("20230517141514_AddTables")]
+    partial class AddTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,21 +50,21 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 5, 17, 12, 23, 59, 80, DateTimeKind.Local).AddTicks(3225),
+                            CreatedAt = new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6700),
                             Name = "Azerbaycan",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 5, 17, 12, 23, 59, 80, DateTimeKind.Local).AddTicks(3227),
+                            CreatedAt = new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6700),
                             Name = "Turkiye",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 5, 17, 12, 23, 59, 80, DateTimeKind.Local).AddTicks(3228),
+                            CreatedAt = new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6700),
                             Name = "Ingiltere",
                             SoftDelete = false
                         });
@@ -105,7 +105,7 @@ namespace Repository.Migrations
                             Id = 1,
                             Address = "Sumqayit",
                             Age = 27,
-                            CreatedAt = new DateTime(2023, 5, 17, 12, 23, 59, 80, DateTimeKind.Local).AddTicks(3047),
+                            CreatedAt = new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6590),
                             FullName = "Roya Meherremova",
                             SoftDelete = false
                         },
@@ -114,7 +114,7 @@ namespace Repository.Migrations
                             Id = 2,
                             Address = "Xetai",
                             Age = 28,
-                            CreatedAt = new DateTime(2023, 5, 17, 12, 23, 59, 80, DateTimeKind.Local).AddTicks(3061),
+                            CreatedAt = new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6630),
                             FullName = "Anar Aliyev",
                             SoftDelete = false
                         },
@@ -123,7 +123,7 @@ namespace Repository.Migrations
                             Id = 3,
                             Address = "Nesimi",
                             Age = 18,
-                            CreatedAt = new DateTime(2023, 5, 17, 12, 23, 59, 80, DateTimeKind.Local).AddTicks(3063),
+                            CreatedAt = new DateTime(2023, 5, 17, 18, 15, 13, 971, DateTimeKind.Local).AddTicks(6630),
                             FullName = "Mubariz Agayev",
                             SoftDelete = false
                         });

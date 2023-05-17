@@ -20,7 +20,7 @@ namespace Repository.Repositories
         {
             if(entity == null) {  throw new ArgumentNullException(nameof(entity)); }
             await entities.AddAsync(entity);
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
         }
 
         public async Task DeleteAsync(T entity)
@@ -29,7 +29,7 @@ namespace Repository.Repositories
 
             entities.Remove(entity);
 
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -53,7 +53,9 @@ namespace Repository.Repositories
             if (entity is null) throw new ArgumentNullException(nameof(entity));
 
             entities.Update(entity);
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
         }
+
+        public async Task SaveChangesAsync() => _context.SaveChangesAsync();
     }
 }

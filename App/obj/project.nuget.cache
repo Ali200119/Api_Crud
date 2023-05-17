@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jsqBSC+T0nROvUCxSErHqmorAA2GsIjKPwvujlXAJvrDhsRWsbG/Ex/OvYAddAe1wae+uXuQrWy1awhgYQYYNw==",
+  "dgSpecHash": "B+9eJXGnSmEIKaRcagYN59Ukn7aOMdPIXWJLjOdciwaESV5C99CVBW4p3u53NhLCe9JLukx07y5mGmQ4tGBCTg==",
   "success": true,
-  "projectFilePath": "/Users/ali200119/Desktop/P135-Api-Onion/App/App.csproj",
+  "projectFilePath": "/Users/ali200119/Desktop/Api_Crud/App/App.csproj",
   "expectedPackageFiles": [
     "/Users/ali200119/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/ali200119/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

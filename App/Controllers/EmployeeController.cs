@@ -102,5 +102,26 @@ namespace App.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet]
+        [ProducesResponseType(statusCode:StatusCodes.Status200OK)]
+        [ProducesResponseType(statusCode:StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(statusCode:StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> SearchByName([Required] string searchText)
+        {
+            try
+            {
+                return Ok(await _service.SearchByName(searchText));
+                
+            }
+            catch (NullReferenceException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
