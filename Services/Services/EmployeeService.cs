@@ -18,7 +18,7 @@ namespace Services.Services
 
         public EmployeeService(IEmployeeRepository employeeRepo,IMapper mapper)
         {
-            _employeeRepo = employeeRepo; 
+            _employeeRepo = employeeRepo;
             _mapper = mapper;
         }
 
@@ -30,8 +30,17 @@ namespace Services.Services
 
         public async Task DeleteAsync(int? id) => await _employeeRepo.DeleteAsync(await _employeeRepo.GetByIdAsync(id));
 
-        public async Task UpdateAsync(EmployeeEditDto employee) => await _employeeRepo.UpdateAsync(_mapper.Map<Employee>(employee));
+        //public async Task UpdateAsync(EmployeeEditDto employee) => await _employeeRepo.UpdateAsync(_mapper.Map<Employee>(employee));
+
+        public async Task UpdateAsync(EmployeeEditDto employee, int? id)
+        {
+            Employee existedEmployee = await _employeeRepo.GetByIdAsync(id);
+
+            await _employeeRepo.UpdateAsync(_mapper.Map(employee, existedEmployee));
+        }
 
         public async Task<EmployeeDto> SearchByName(string seacrhText) => _mapper.Map<EmployeeDto>(await _employeeRepo.SearchByName(seacrhText));
+
+        public async Task SoftDeleteAsync(int? id) => await _employeeRepo.SoftDeleteAsync(await _employeeRepo.GetByIdAsync(id));
     }
 }

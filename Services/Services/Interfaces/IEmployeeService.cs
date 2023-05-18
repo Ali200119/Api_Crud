@@ -13,7 +13,8 @@ namespace Services.Services.Interfaces
         Task<EmployeeDto> GetByIdAsync(int? id);
         Task CreateAsync(EmployeeCreateDto employee);
         Task DeleteAsync(int? id);
-        Task UpdateAsync(EmployeeEditDto employee);
+        Task UpdateAsync(EmployeeEditDto employee, int? id);
         Task<EmployeeDto> SearchByName(string searchString);
+        Task SoftDeleteAsync(int? id);
     }
 }

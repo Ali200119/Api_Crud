@@ -89,8 +89,7 @@ namespace App.Controllers
         {
             try
             {
-                employee.Id = id;
-                await _service.UpdateAsync(employee);
+                await _service.UpdateAsync(employee, id);
                 return Ok();
             }
             catch (NullReferenceException ex)
@@ -104,7 +103,7 @@ namespace App.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(statusCode:StatusCodes.Status200OK)]
+        [ProducesResponseType(statusCode:StatusCodes.Status200OK, Type = typeof(EmployeeDto))]
         [ProducesResponseType(statusCode:StatusCodes.Status400BadRequest)]
         [ProducesResponseType(statusCode:StatusCodes.Status404NotFound)]
         public async Task<IActionResult> SearchByName([Required] string searchText)
@@ -121,6 +120,28 @@ namespace App.Controllers
             catch (ArgumentNullException ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("{id}")]
+        [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
+        [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> SoftDelete([FromRoute, Required] int id)
+        {
+            try
+            {
+                await _service.SoftDeleteAsync(id);
+                return Ok();
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                return NotFound(ex.Message);
             }
         }
     }

@@ -57,5 +57,14 @@ namespace Repository.Repositories
         }
 
         public async Task SaveChangesAsync() => _context.SaveChangesAsync();
+
+        public async Task SoftDeleteAsync(T entity)
+        {
+            if (entity is null) throw new ArgumentNullException(nameof(entity));
+
+            entity.SoftDelete = true;
+
+            await SaveChangesAsync();
+        }
     }
 }

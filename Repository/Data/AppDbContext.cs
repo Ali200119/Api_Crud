@@ -14,10 +14,17 @@ namespace Repository.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             //modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             //modelBuilder.ApplyConfiguration(new CountryConfiguration());
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+
+            modelBuilder.Entity<Employee>().HasQueryFilter(e => !e.SoftDelete);
+            modelBuilder.Entity<Country>().HasQueryFilter(c => !c.SoftDelete);
+
 
             modelBuilder.Entity<Employee>().HasData(
                 new Employee
@@ -63,8 +70,6 @@ namespace Repository.Data
                     Id = 3,
                     Name = "Ingiltere"
                 });
-
-            base.OnModelCreating(modelBuilder);
         }
 
     }
