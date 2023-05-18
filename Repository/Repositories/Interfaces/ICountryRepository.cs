@@ -9,5 +9,6 @@ namespace Repository.Repositories.Interfaces
 {
     public interface ICountryRepository: IRepository<Country>
     {
+        Task<Country> SearchByName(string searchText);
     }
 }

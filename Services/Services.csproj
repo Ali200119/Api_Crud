@@ -17,4 +17,10 @@
     <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="DTOs\Country\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\Country\" />
+  </ItemGroup>
 </Project>
